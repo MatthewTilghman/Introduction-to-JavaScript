@@ -38,8 +38,12 @@ Do the following:
 
    HINT: no function required
 */
-var variable1 = 'javascript', variable2 = 'html';
-if (true) {
+let x = 1;
+let y = 2;
+if (x === y){
+  console.log(false)
+} 
+
 
 
 
@@ -54,13 +58,25 @@ Do the following:
 
    HINT: look up the Number method
 */
-var num = 1999;
-var n = num.toString();
-console.log(typeof String1);
+const number = '1999';
+return '1999';
+
+console.log(parseInt(number));
 
 
 
 
+
+
+
+
+
+
+
+function newFunction() {
+  {
+  }
+}
 
 /*
 Task 1d - Multiply
@@ -122,9 +138,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age, weight){
+  if (age>=1&&weight<=5){
+    return .05*weight;
+  } 
+  else if (age>=1&&(weight>=6&&weight<=10)){
+    return .04*weight;
+  } 
+  else if (age>=1&&(weight>=11&&weight<=15)){
+    return .03*weight;
+  } 
+  else if (age>=1&&weight>15){
+    return .02*weight;
+  } 
+  else if (age>=.16&&age<=.33){
+    return .10*weight;
+  } 
+  else if (age>=.33&&age<=.58){
+    return .05*weight;
+  } 
+  else if (age>=.58&&age<=.99){
+    return .04*weight;
   }
+} hungryDog(1, 15);  
 
 
 
@@ -142,10 +178,21 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
-}
-  
+function game(choice1){
+  if (choice1 === 'rock' || choice1 === 'paper' || choice1 === 'scissors');
+  let choice2 = Math.random();
+  if (choice2 < 0.34) {
+    choice2 = 'rock'
+  }
+  else if (choice2 < 0.67) {
+    choice2 = 'paper'
+  }
+  else {
+    choice2 = 'scissors'
+  }
+  if (choice1 === choice2){
+  }
+} 
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
