@@ -17,10 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-// let votingAge = 18;
-// if (votingAge >= 18);
-
-// return true;
+const votingAge = 19;
+if (votingAge >= 18){
+  console.log("you can vote.")
+} else {
+  console.log("you cannot legally vote.")
+}
 
 
 
@@ -63,11 +65,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-// val = Number("1999");
-// console.log(Number("1999"));
-// return 1999;
-
+let year = '1999';
+year = 1999;
+console.log(year);
 
 /*
 Task 1d - Multiply
@@ -165,12 +165,44 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(user, cpu){
+    if (user === cpu){
+      return "it's a tie";
+    } else if (user === 'scissors' && cpu === 'paper'){
+      return "you win!";
+    } else if (user === 'scissors' && cpu === 'rock'){
+      return "you lose!";
+    } else if (user === 'paper' && cpu === 'scissors'){
+      return "you lose!";
+    } else if (user === 'paper' && cpu === 'rock'){
+      return "you win!";
+    } else if (user === 'rock' && cpu === 'scissors'){
+      return "you win!";
+    } else if (user === 'rock' && cpu === 'paper'){
+      return "you lose!";
+    }
 }
-  
-  
-
+function cpuChoice(){
+  const x = (Math.floor(Math.random()*3));
+  if (x === 0){
+    return "scissors";
+  } else if (x === 1){
+    return "paper";
+  } else if (x === 2){
+    return "rock";
+  }
+}
+function userChoice(){
+  const x = (Math.floor(Math.random()*3));
+  if (x === 0){
+    return "scissors";
+  } else if (x === 1){
+    return "paper";
+  } else if (x === 2){
+    return "rock";
+  }
+}
+console.log(game(cpuChoice(),userChoice()));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
